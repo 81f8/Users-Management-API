@@ -6,10 +6,10 @@ const port = 3000;
 
 // PostgreSQL database details
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "users",
-  password: "1234",
+  user: "salam",
+  host: "dpg-cltebo8l5elc73dnobr0-a",
+  database: "users_6com",
+  password: "D9DlOAPLzOaPFfc5ZdCjmSn3BHhXxTE5",
   port: 5432,
 });
 
