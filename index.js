@@ -16,6 +16,13 @@ const pool = new Pool({
 // parse JSON requests
 app.use(express.json());
 
+
+// welcome page
+app.get("/", (req, res) => {
+    res.sendFile("index.html");
+});
+
+
 // API endpoint to get all users
 app.get("/api/users", async (req, res) => {
   try {
