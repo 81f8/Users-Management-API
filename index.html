@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="User Management API By Salam Adil">
-  <meta name="keywords" content="User Management, API, Documentation">
-  <meta name="author" content="salam adil">
-  <title>User Management API</title>
+  <meta name="description" content="User and Employee Management API By Salam Adil">
+  <meta name="keywords" content="User Management, Employee Management, API, Documentation, Express.js, PostgreSQL">
+  <meta name="author" content="Salam Adil">
+  <title>User and Employee Management API</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,6 +23,10 @@
 
     h2 {
       margin-top: 40px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
     }
 
     p {
@@ -62,20 +66,26 @@
       border-radius: 5px;
       overflow-x: scroll;
     }
+
+    .author-info {
+      font-style: italic;
+      margin-top: 20px;
+      color: #555;
+    }
   </style>
 </head>
 
 <body>
-  <h1>User Management API</h1>
-  <h3>made by salam adil   |   Express js / Postgresql </h3>
+  <h1>User and Employee Management API</h1>
+  <h3 class="author-info">Made by Salam Adil | Express.js / PostgreSQL</h3>
   <p>
-    Welcome to the User Management API documentation. This API provides endpoints for managing user information
-    efficiently. Below is an overview of the available endpoints and their functionalities.
+    Welcome to the User and Employee Management API documentation. This API provides endpoints for managing user and
+    employee information efficiently. Below is an overview of the available endpoints and their functionalities.
   </p>
 
   <h2 id="usage">Usage</h2>
 
-  <h3 id="endpoints">Endpoints</h3>
+  <h3 id="endpoints">Endpoints for Users</h3>
 
   <table>
     <thead>
@@ -129,12 +139,71 @@
       <tr>
         <td>/api/users/:id</td>
         <td>GET</td>
-        <td>Get auser by ID.</td>
+        <td>Get a user by ID.</td>
       </tr>
       <tr>
         <td>/api/users/:id/geo</td>
         <td>GET</td>
         <td>Get a user's geo information and Google Maps link by ID.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="endpoints-employees">Endpoints for Employees</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/api/employees</td>
+        <td>GET</td>
+        <td>Get a list of all employees.</td>
+      </tr>
+      <tr>
+        <td>/api/employees</td>
+        <td>POST</td>
+        <td>Create a new employee.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/:id</td>
+        <td>PUT</td>
+        <td>Update employee details by ID.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/:id</td>
+        <td>DELETE</td>
+        <td>Delete an employee by ID.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/search</td>
+        <td>GET</td>
+        <td>Search employees by name or email.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/filter</td>
+        <td>GET</td>
+        <td>Filter employees by department.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/first</td>
+        <td>GET</td>
+        <td>Get the first employee.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/last</td>
+        <td>GET</td>
+        <td>Get the last employee.</td>
+      </tr>
+      <tr>
+        <td>/api/employees/:id</td>
+        <td>GET</td>
+        <td>Get an employee by ID.</td>
       </tr>
     </tbody>
   </table>
