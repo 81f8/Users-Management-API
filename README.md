@@ -1,6 +1,6 @@
 # User Management API
 
-This is a simple Node.js API built with Express and PostgreSQL for managing user data.
+This is a simple Node.js API built with Express and PostgreSQL for managing user & employees data.
 
 ## Table of Contents
 
@@ -20,8 +20,15 @@ This is a simple Node.js API built with Express and PostgreSQL for managing user
     - [Get the Last User](#get-the-last-user)
     - [Get a User by ID](#get-a-user-by-id)
     - [Get a User's Geo Information and Google Maps Link](#get-a-users-geo-information-and-google-maps-link)
-- [Contributing](#contributing)
-- [License](#license)
+    - [Get All Employees](#get-all-employees)
+    - [Create a New Employee](#create-a-new-employee)
+    - [Update Employee Details by ID](#update-employee-details-by-id)
+    - [Delete an Employee by ID](#delete-an-employee-by-id)
+    - [Search Employees](#search-employees)
+    - [Filter Employees by Department](#filter-employees-by-department)
+    - [Get the First Employee](#get-the-first-employee)
+    - [Get the Last Employee](#get-the-last-employee)
+    - [Get an Employee by ID](#get-an-employee-by-id)
 
 ## Getting Started
 
@@ -70,62 +77,64 @@ const pool = new Pool({
 - **Method:** `GET`
 - **Description:** Get a list of all users.
 
-#### Create a New User
+...
 
-- **URL:** `/api/users`
+#### Get All Employees
+
+- **URL:** `/api/employees`
+- **Method:** `GET`
+- **Description:** Get a list of all employees.
+
+#### Create a New Employee
+
+- **URL:** `/api/employees`
 - **Method:** `POST`
-- **Description:** Create a new user.
+- **Description:** Create a new employee.
 
-#### Update User Details
+#### Update Employee Details by ID
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `PUT`
-- **Description:** Update user details by ID.
+- **Description:** Update employee details by ID.
 
-#### Delete a User
+#### Delete an Employee by ID
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `DELETE`
-- **Description:** Delete a user by ID.
+- **Description:** Delete an employee by ID.
 
-#### Search Users
+#### Search Employees
 
-- **URL:** `/api/users/search`
+- **URL:** `/api/employees/search`
 - **Method:** `GET`
-- **Description:** Search users by name or username.
+- **Description:** Search employees by name or username.
 
-#### Filter Users by City
+#### Filter Employees by Department
 
-- **URL:** `/api/users/filter`
+- **URL:** `/api/employees/filter`
 - **Method:** `GET`
-- **Description:** Filter users by city.
+- **Description:** Filter employees by department.
 
-#### Get the First User
+#### Get the First Employee
 
-- **URL:** `/api/users/first`
+- **URL:** `/api/employees/first`
 - **Method:** `GET`
-- **Description:** Get the first user.
+- **Description:** Get the first employee.
 
-#### Get the Last User
+#### Get the Last Employee
 
-- **URL:** `/api/users/last`
+- **URL:** `/api/employees/last`
 - **Method:** `GET`
-- **Description:** Get the last user.
+- **Description:** Get the last employee.
 
-#### Get a User by ID
+#### Get an Employee by ID
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `GET`
-- **Description:** Get a user by ID.
+- **Description:** Get an employee by ID.
 
-#### Get a User's Geo Information and Google Maps Link
-
-- **URL:** `/api/users/:id/geo`
-- **Method:** `GET`
-- **Description:** Get a user's geo information and Google Maps link by ID.
+...
 
 ## Contributing
 
 Feel free to contribute to this project.
-
-
