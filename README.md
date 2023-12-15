@@ -1,6 +1,6 @@
-# User Management API
+# User and Employee Management API
 
-This is a simple Node.js API built with Express and PostgreSQL for managing user data.
+This is a simple Node.js API built with Express and PostgreSQL for managing user and employee data.
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@ This is a simple Node.js API built with Express and PostgreSQL for managing user
   - [Installation](#installation)
   - [Database Setup](#database-setup)
 - [Usage](#usage)
-  - [Endpoints](#endpoints)
+  - [Endpoints for Users](#endpoints-for-users)
     - [Get All Users](#get-all-users)
     - [Create a New User](#create-a-new-user)
     - [Update User Details](#update-user-details)
@@ -20,6 +20,16 @@ This is a simple Node.js API built with Express and PostgreSQL for managing user
     - [Get the Last User](#get-the-last-user)
     - [Get a User by ID](#get-a-user-by-id)
     - [Get a User's Geo Information and Google Maps Link](#get-a-users-geo-information-and-google-maps-link)
+  - [Endpoints for Employees](#endpoints-for-employees)
+    - [Get All Employees](#get-all-employees)
+    - [Create a New Employee](#create-a-new-employee)
+    - [Update Employee Details](#update-employee-details)
+    - [Delete an Employee](#delete-an-employee)
+    - [Search Employees](#search-employees)
+    - [Filter Employees by Department](#filter-employees-by-department)
+    - [Get the First Employee](#get-the-first-employee)
+    - [Get the Last Employee](#get-the-last-employee)
+    - [Get an Employee by ID](#get-an-employee-by-id)
 - [Contributing](#contributing)
 - [License](#license)
 - [Ignoring node_modules](#ignoring-node_modules)
@@ -53,80 +63,75 @@ npm install
 
 ```javascript
 const pool = new Pool({
-  user: "your-username",
-  host: "localhost",
-  database: "users",
-  password: "your-password",
-  port: 5432,
+  user: process.env.DB_USER || "your-username",
+  host: process.env.DB_HOST || "localhost",
+  database: process.env.DB_NAME || "users",
+  password: process.env.DB_PASSWORD || "your-password",
+  port: process.env.DB_PORT || 5432,
 });
 ```
 
 ## Usage
 
-### Endpoints
+### Endpoints for Users
 
-#### Get All Users
+...
 
-- **URL:** `/api/users`
+### Endpoints for Employees
+
+#### Get All Employees
+
+- **URL:** `/api/employees`
 - **Method:** `GET`
-- **Description:** Get a list of all users.
+- **Description:** Get a list of all employees.
 
-#### Create a New User
+#### Create a New Employee
 
-- **URL:** `/api/users`
+- **URL:** `/api/employees`
 - **Method:** `POST`
-- **Description:** Create a new user.
+- **Description:** Create a new employee.
 
-#### Update User Details
+#### Update Employee Details
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `PUT`
-- **Description:** Update user details by ID.
+- **Description:** Update employee details by ID.
 
-#### Delete a User
+#### Delete an Employee
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `DELETE`
-- **Description:** Delete a user by ID.
+- **Description:** Delete an employee by ID.
 
-#### Search Users
+#### Search Employees
 
-- **URL:** `/api/users/search`
+- **URL:** `/api/employees/search`
 - **Method:** `GET`
-- **Description:** Search users by name or username.
+- **Description:** Search employees by name or email.
 
-#### Filter Users by City
+#### Filter Employees by Department
 
-- **URL:** `/api/users/filter`
+- **URL:** `/api/employees/filter`
 - **Method:** `GET`
-- **Description:** Filter users by city.
+- **Description:** Filter employees by department.
 
-#### Get the First User
+#### Get the First Employee
 
-- **URL:** `/api/users/first`
+- **URL:** `/api/employees/first`
 - **Method:** `GET`
-- **Description:** Get the first user.
+- **Description:** Get the first employee.
 
-#### Get the Last User
+#### Get the Last Employee
 
-- **URL:** `/api/users/last`
+- **URL:** `/api/employees/last`
 - **Method:** `GET`
-- **Description:** Get the last user.
+- **Description:** Get the last employee.
 
-#### Get a User by ID
+#### Get an Employee by ID
 
-- **URL:** `/api/users/:id`
+- **URL:** `/api/employees/:id`
 - **Method:** `GET`
-- **Description:** Get a user by ID.
+- **Description:** Get an employee by ID.
 
-#### Get a User's Geo Information and Google Maps Link
-
-- **URL:** `/api/users/:id/geo`
-- **Method:** `GET`
-- **Description:** Get a user's geo information and Google Maps link by ID.
-
-## Contributing
-
-Feel free to contribute to this project.
-
-
+...
+Feel free to customize the content further based on your specific requirements.
