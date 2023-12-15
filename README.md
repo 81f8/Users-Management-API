@@ -73,7 +73,7 @@ const pool = new Pool({
 
 #### Get All Users
 
-- **URL:** `/api/users`
+- **URL:** `/api/v1/users`
 - **Method:** `GET`
 - **Description:** Get a list of all users.
 
@@ -81,55 +81,55 @@ const pool = new Pool({
 
 #### Get All Employees
 
-- **URL:** `/api/employees`
+- **URL:** `/api/v1/employees`
 - **Method:** `GET`
 - **Description:** Get a list of all employees.
 
 #### Create a New Employee
 
-- **URL:** `/api/employees`
+- **URL:** `/api/v1/employees`
 - **Method:** `POST`
 - **Description:** Create a new employee.
 
 #### Update Employee Details by ID
 
-- **URL:** `/api/employees/:id`
+- **URL:** `/api/v1/employees/:id`
 - **Method:** `PUT`
 - **Description:** Update employee details by ID.
 
 #### Delete an Employee by ID
 
-- **URL:** `/api/employees/:id`
+- **URL:** `/api/v1/employees/:id`
 - **Method:** `DELETE`
 - **Description:** Delete an employee by ID.
 
 #### Search Employees
 
-- **URL:** `/api/employees/search`
+- **URL:** `/api/v1/employees/search`
 - **Method:** `GET`
 - **Description:** Search employees by name or username.
 
 #### Filter Employees by Department
 
-- **URL:** `/api/employees/filter`
+- **URL:** `/api/v1/employees/filter`
 - **Method:** `GET`
 - **Description:** Filter employees by department.
 
 #### Get the First Employee
 
-- **URL:** `/api/employees/first`
+- **URL:** `/api/v1/employees/first`
 - **Method:** `GET`
 - **Description:** Get the first employee.
 
 #### Get the Last Employee
 
-- **URL:** `/api/employees/last`
+- **URL:** `/api/v1/employees/last`
 - **Method:** `GET`
 - **Description:** Get the last employee.
 
 #### Get an Employee by ID
 
-- **URL:** `/api/employees/:id`
+- **URL:** `/api/v1/employees/:id`
 - **Method:** `GET`
 - **Description:** Get an employee by ID.
 
